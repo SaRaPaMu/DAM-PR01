@@ -169,7 +169,9 @@ public class DbController {
 	 * @return - En caso de encontrar el registro; debe devolver un objeto de ese tipo. <br/> En caso de no encontrarlo; debe devovler un NULL. <br/> En caso de Exception; devolver null.
 	 */
 	public DbObject getByid(DbObject dbObject, Integer id) {
-		// TODO Auto-generated method stub
+		
+		
+		
 		return null;
 	}
 

@@ -80,6 +80,11 @@ public class Producto extends DbObject {
 	@Override
 	public DbObject getDbObject(ResultSet res) throws SQLException {
 		Producto item = new Producto();
+		
+		int created = res.getInt("created");
+		Date date = new Date(created);		
+		item.setCreated( date );
+		
 		item.setNombre( res.getString("nombre") );
 		item.setPrecio( res.getInt("precio") );
 		item.setStock( res.getInt("stock") );
@@ -87,5 +92,10 @@ public class Producto extends DbObject {
 				
 		return item;
 	} 
+	
+	@Override
+	public String toString() {
+		return this.getValues();
+	}
 	
 }
