@@ -81,11 +81,11 @@ public class Main {
 	        int salir;
 	        
 	        do {
-	            System.out.println("\n");
+	        	System.out.println("\n");
 	            System.out.println("===MI TIENDA===\n");
 
 	            System.out.println("\n");
-
+	            
 	            System.out.println("(1).Clientes\n");
 	            System.out.println("(2).Categorias\n");
 	            System.out.println("(3).Productos\n");
@@ -102,6 +102,7 @@ public class Main {
 
 	            switch (numero) {
 	                case 1:
+	                	System.out.println("\n");
 	                	System.out.println("(1).Nuevo Cliente\n");
 	    	            System.out.println("(2).Listar Clientes\n");
 	    	            System.out.println("(3).Eliminar Cliente\n");
@@ -126,6 +127,7 @@ public class Main {
 	    	            }
 	                    break;
 	                case 2:
+	                	System.out.println("\n");
 	                	System.out.println("(1).Nuevo Categoria\n");
 	    	            System.out.println("(2).Listar Categorias\n");
 	    	            System.out.println("(3).Eliminar Categoria\n");
@@ -150,6 +152,7 @@ public class Main {
 	    	            }
 	                    break;
 	                case 3:
+	                	System.out.println("\n");
 	                	System.out.println("(1).Nuevo Producto\n");
 	    	            System.out.println("(2).Listar Productos\n");
 	    	            System.out.println("(3).Eliminar Producto\n");
@@ -174,6 +177,7 @@ public class Main {
 	    	            }
 	                    break;
 	                case 4:
+	                	System.out.println("\n");
 	                	System.out.println("(1).Nuevo Factura\n");
 	    	            System.out.println("(2).Listar Facturas\n");
 	    	            System.out.println("(3).Eliminar Factura\n");
