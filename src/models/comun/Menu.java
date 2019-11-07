@@ -24,8 +24,6 @@ public class Menu {
 		 Scanner scan = new Scanner(System.in);
 	        int numero;
 	        
-	        
-	        do {
 	        	System.out.println("\n");
 	            System.out.println("===MI TIENDA===\n");
 
@@ -43,31 +41,24 @@ public class Menu {
 
 	            numero = (int) Integer.parseInt(scan.nextLine());
 
-	            salir = 0;
+	           
 
 	            switch (numero) {
 	                case 1:
-	                	return e=Estado.CLIENTE;
-	                	break;
+	                	return e=Estado.CLIENTE;	                	
 	                case 2:
-	                	
+	                	return e=Estado.CATEGORIA;
 	                case 3:
-	                	
+	                	return e=Estado.PRODUCTO;
 	                case 4:
-	                	                               
+	                	return e=Estado.FACTURA;                               
 	                case 5:
-	                    
-	                    System.out.println("\n");
-	                    System.out.println("===FINALIZADO===\n");
-	                    salir = 1;
-
-	                    break;
+	                	return e=Estado.SALIR;
 	                default:
-	                    System.out.println("\n");
-	                    System.out.println("Opcion no valida\n");
-	                    break;
+	                	return null;
+	                	
 	            }
-	        } while (salir != 1);*/
+	        
 	}
 	
 	
