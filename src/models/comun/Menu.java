@@ -2,6 +2,11 @@ package src.models.comun;
 
 import java.util.Scanner;
 
+import src.menucruds.MenuCategoria;
+import src.menucruds.MenuCliente;
+import src.menucruds.MenuFactura;
+import src.menucruds.MenuProducto;
+
 public class Menu {
 
 	public Menu() {
@@ -33,13 +38,17 @@ public class Menu {
 
 			switch (numero) {
 			case 1:
-
+				MenuCliente cli = new MenuCliente();
+				cli.initMenuCliente();
 			case 2:
-
+				MenuCategoria cat = new MenuCategoria();
+				cat.initMenuCategoria();
 			case 3:
-
+				MenuProducto prod = new MenuProducto();
+				prod.initMenuProducto();
 			case 4:
-
+				MenuFactura fac = new MenuFactura();
+				fac.initMenuFactura();
 			case 5:
 				salir = 1;
 			default:
