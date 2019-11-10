@@ -7,6 +7,7 @@ import src.models.Categoria;
 import src.models.Clientes;
 import src.models.Producto;
 import src.models.comun.DbObject;
+import src.models.comun.Menu;
 import src.models.comun.Tools; 
 
 public class Main {
@@ -37,6 +38,10 @@ public class Main {
 		// Hacer el Backup del día
 		//Backup.getInstance().doBackup();  
 		
+		 Menu menu = new Menu();
+		 
+		 	menu.initMenu();
+		/*
 		 Categoria cat = new Categoria();
 		 cat.setNombre("Cat 01");
 		 //cat.save();
@@ -70,12 +75,13 @@ public class Main {
 		 
 		 Clientes cli01 = (Clientes)new Clientes().getByid(1);
 		 System.out.println(cli01);
-		
+		*/
 		
 		//statemnt.executeQuery(sql);
 		
 		//con.prepareStatement(sql)
-		 
+		
+		
 		
 	 
 	}

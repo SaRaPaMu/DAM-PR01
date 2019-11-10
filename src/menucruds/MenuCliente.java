@@ -24,15 +24,20 @@ public class MenuCliente {
 
 		switch (numero) {
 		case 1:
-			
+			CrudCliente.createCliente();
+			break;
 		case 2:
-			
+			CrudCliente.updateCliente();
+			break;
 		case 3:
-			
+			CrudCliente.readCliente();
+			break;
 		case 4:
-			
+			CrudCliente.deleteCliente();
+			break;
 		case 5:
-
+			CrudCliente.listClientes();
+			break;
 		}
 
 	}

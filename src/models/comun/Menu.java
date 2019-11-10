@@ -40,18 +40,24 @@ public class Menu {
 			case 1:
 				MenuCliente cli = new MenuCliente();
 				cli.initMenuCliente();
+				break;
 			case 2:
 				MenuCategoria cat = new MenuCategoria();
 				cat.initMenuCategoria();
+				break;
 			case 3:
 				MenuProducto prod = new MenuProducto();
 				prod.initMenuProducto();
+				break;
 			case 4:
 				MenuFactura fac = new MenuFactura();
 				fac.initMenuFactura();
+				break;
 			case 5:
 				salir = 1;
+				break;
 			default:
+				break;
 
 			}
 		} while (salir != 1);
