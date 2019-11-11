@@ -55,6 +55,7 @@ public class Menu {
 				break;
 			case 5:
 				salir = 1;
+				System.out.println("Finalizado");
 				break;
 			default:
 				break;

@@ -1,9 +1,13 @@
 package src.menucruds;
 
+import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import src.models.Clientes;
 import src.models.comun.DbController;
+import src.models.comun.DbObject;
 
 public class CrudCliente {
 
@@ -48,7 +52,9 @@ public class CrudCliente {
 
 		System.out.println("Dame el id del cliente que quieres consultar \n");
 		int valores = (int) Integer.parseInt(scan.nextLine());
-		cli.getByid(valores);
+		cli=(Clientes)cli.getByid(valores);
+		
+		System.out.println(cli.toString());
 
 	}
 
@@ -58,7 +64,7 @@ public class CrudCliente {
 		
 		System.out.println("Dame el id del cliente que quieres editar \n");
 		int valor = (int) Integer.parseInt(scan.nextLine());
-		cli.getByid(valor);
+		cli = (Clientes)cli.getByid(valor);
 		
 		System.out.println("Dame los datos que quieres cambiar en caso de no cambiar un dato dejelo en blanco\n");
 		
@@ -103,6 +109,9 @@ public class CrudCliente {
 		if(valores=="") {
 			
 		}else {
+		//Pattern patron = Pattern.compile("[^A-Za-z0-9.@_-~#]+");
+		//patron.matches("[^A-Za-z0-9.@_-~#]+", valores);
+					
 		cli.setEmail(valores);
 		System.out.println("\n");
 		}
@@ -118,7 +127,7 @@ public class CrudCliente {
 		
 		System.out.println("Dame el id del cliente que quieres borrar \n");
 		int valor = (int) Integer.parseInt(scan.nextLine());
-		cli.getByid(valor);
+		cli=(Clientes)cli.getByid(valor);
 		
 		
 		cli.delete();
@@ -127,7 +136,13 @@ public class CrudCliente {
 	public static void listClientes() {
 		Clientes cli = new Clientes();
 			
-		cli.list();
+		List<DbObject> clientes = cli.list();
+		
+		for (DbObject cliente : clientes) {
+			cli=(Clientes) cliente;
+			System.out.println(cli.getId()+""+cli.toString());
+		}
+		
 	}
 	
 }
