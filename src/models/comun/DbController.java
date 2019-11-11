@@ -181,5 +181,13 @@ public class DbController {
 		
 		return dev.get(0);
 	}
-
+	
+	public List<DbObject> listByCategoria(DbObject obj, int id) {
+		  
+		String sql = "SELECT * FROM "+obj.getTable()+" WHERE id_categoria= "+id; 
+		List<DbObject> dev = this.doExecuteQuery(sql, obj);
+		
+		return dev;
+	} 
+	
 }

@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 
 import src.models.Producto;
+import src.models.comun.DbController;
 import src.models.comun.DbObject;
 
 public class CrudProducto {
@@ -148,5 +149,23 @@ public class CrudProducto {
 		}
 		
 	}
+	
+	public static void listProductoByIdCategoria() {
+		Producto prod = new Producto();
+		Scanner scan = new Scanner(System.in);
+		
+		CrudCategoria.listCategoria();
+		System.out.println("escoge el id de una de estas categorias");
+		int id = (int) Integer.parseInt(scan.nextLine());
+				
+		List<DbObject> productos = DbController.getInstance().listByCategoria(prod, id);
+		
+		for (DbObject producto : productos) {
+			prod=(Producto) producto;
+			System.out.println(prod.getId()+""+prod.toString());
+		}
+		
+	}
+	
 	
 }
