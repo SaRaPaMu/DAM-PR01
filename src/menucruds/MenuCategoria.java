@@ -24,14 +24,19 @@ public class MenuCategoria {
 
 		switch (numero) {
 		case 1:
+			CrudCategoria.createCategoria();
 			break;
 		case 2:
+			CrudCategoria.updateCategoria();
 			break;
 		case 3:
+			CrudCategoria.readCategoria();
 			break;
 		case 4:
+			CrudCategoria.deleteCategoria();
 			break;
 		case 5:
+			CrudCategoria.listCategoria();
 			break;
 		}
 

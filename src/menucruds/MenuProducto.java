@@ -23,14 +23,19 @@ public class MenuProducto {
 
 		switch (numero) {
 		case 1:
+			CrudProducto.createProducto();
 			break;
 		case 2:
+			CrudProducto.updateProducto();
 			break;
 		case 3:
+			CrudProducto.readProducto();
 			break;
 		case 4:
+			CrudProducto.deleteProducto();
 			break;
 		case 5:
+			CrudProducto.listProducto();
 			break;
 		}
 

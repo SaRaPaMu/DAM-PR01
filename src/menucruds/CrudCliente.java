@@ -14,32 +14,44 @@ public class CrudCliente {
 	public static void createCliente() {
 		Clientes cli = new Clientes();
 		Scanner scan = new Scanner(System.in);
-
+		String valores;
+		
 		System.out.println("Dame los datos del cliente \n");
-
+		
+		do {
 		System.out.println("Nombre:");
-		String valores = scan.nextLine();
+		valores = scan.nextLine();
 		cli.setNombre(valores);
 		System.out.println("\n");
-
+		}while(valores.matches("[a-zA-Z]*|\\s*"));
+		
+		do {
 		System.out.println("Dni:");
 		valores = scan.nextLine();
 		cli.setDni(valores);
 		System.out.println("\n");
-
+		}while(valores.matches("^[0-9]{8}[a-zA-Z]{1}$"));
+		
 		System.out.println("Direccion:");
 		valores = scan.nextLine();
 		cli.setDireccion(valores);
 		System.out.println("\n");
-
+		
+		
+		do {
 		System.out.println("Telefono:");
 		valores = scan.nextLine();
 		cli.setTelefono(valores);
 		System.out.println("\n");
-
+		}while(valores.matches("[0-9]*"));
+		
+		
+		do {
 		System.out.println("Email:");
-		valores = scan.nextLine();
+		valores = scan.nextLine();		
 		cli.setEmail(valores);
+		}while(valores.matches("[^A-Za-z0-9.@_-~#]+"));
+		
 		System.out.println("\n");
 
 		cli.save();
@@ -66,54 +78,60 @@ public class CrudCliente {
 		int valor = (int) Integer.parseInt(scan.nextLine());
 		cli = (Clientes)cli.getByid(valor);
 		
-		System.out.println("Dame los datos que quieres cambiar en caso de no cambiar un dato dejelo en blanco\n");
+		System.out.println("Dame los datos que quieres cambiar\n");
 		
-		System.out.println("Nombre:");
+		System.out.println("Cambiar nombre ? si/no");
 		String valores = scan.nextLine();
-		if(valores=="") {
+		if(valores=="si") {
+			do {
+			System.out.println("Nombre:");
+			valores = scan.nextLine();
+			cli.setNombre(valores);
+			System.out.println("\n");
+			}while(valores.matches("[a-zA-Z]*"));
 			
-		}else {
-		cli.setNombre(valores);
-		System.out.println("\n");
 		}
 		
-		System.out.println("Dni:");
+		System.out.println("Cambiar Dni? si/no");
 		valores = scan.nextLine();
-		if(valores=="") {
-			
-		}else {
-		cli.setDni(valores);
-		System.out.println("\n");
+		if(valores=="si") {
+			do {
+			System.out.println("Dni:");
+			valores = scan.nextLine();
+			cli.setDni(valores);
+			System.out.println("\n");
+			}while(valores.matches("^[0-9]{8}[a-zA-Z]{1}$"));
 		}
 		
-		System.out.println("Direccion:");
+		System.out.println("Cambiar direccion? si/no");
 		valores = scan.nextLine();
-		if(valores=="") {
-			
-		}else {
-		cli.setDireccion(valores);
-		System.out.println("\n");
+		if(valores=="si") {
+			System.out.println("Direccion:");
+			valores = scan.nextLine();
+			cli.setDireccion(valores);
+			System.out.println("\n");
 		}
 		
-		System.out.println("Telefono:");
+		System.out.println("Cambiar telefono? si/no");
 		valores = scan.nextLine();
-		if(valores=="") {
-			
-		}else {
-		cli.setTelefono(valores);
-		System.out.println("\n");
+		if(valores=="si") {
+			do {
+			System.out.println("Telefono:");
+			valores = scan.nextLine();
+			cli.setTelefono(valores);
+			System.out.println("\n");
+			}while(valores.matches("[0-9]*"));
 		}
 		
-		System.out.println("Email:");
+		System.out.println("Cambiar email? si/no");
 		valores = scan.nextLine();
-		if(valores=="") {
-			
-		}else {
-		//Pattern patron = Pattern.compile("[^A-Za-z0-9.@_-~#]+");
-		//patron.matches("[^A-Za-z0-9.@_-~#]+", valores);
-					
-		cli.setEmail(valores);
-		System.out.println("\n");
+		if(valores=="si") {
+			do {
+			System.out.println("Email:");
+			valores = scan.nextLine();		
+			cli.setEmail(valores);
+			System.out.println("\n");
+			}while(valores.matches("[^A-Za-z0-9.@_-~#]+"));
 		}
 		
 		cli.save();
