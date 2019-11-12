@@ -43,7 +43,7 @@ public class CrudCliente {
 		valores = scan.nextLine();
 		cli.setTelefono(valores);
 		System.out.println("\n");
-		}while(valores.matches("[0-9]+\\s*"));
+		}while(valores.matches("^[0-9]+\\s*$"));
 		
 		
 		do {
