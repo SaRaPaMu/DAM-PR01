@@ -72,9 +72,13 @@ public class DbSqlite {
 		
         try {
             // db parameters
-            String url = "jdbc:sqlite:"+Config.PATH_DB+Config.DBNAME;
+            
+        	// String url = Config.DBSQLITE;
+        	//conn = DriverManager.getConnection(url);
+        	
             // create a connection to the database
-            conn = DriverManager.getConnection(url);
+            conn = DriverManager.getConnection(Config.DBMYSQL, Config.DBMYSQL_USER, Config.DBMYSQL_PASS);
+            
             
             System.out.println("Connection to SQLite has been established.");
              
