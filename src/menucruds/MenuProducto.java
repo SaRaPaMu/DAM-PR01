@@ -16,6 +16,7 @@ public class MenuProducto {
 		System.out.println("(3).Consultar\n");
 		System.out.println("(4).Borrar\n");
 		System.out.println("(5).Listar\n");
+		System.out.println("(6).Listar por categoria\n");
 
 		System.out.println("Escoge una opcion: ");
 
@@ -36,6 +37,9 @@ public class MenuProducto {
 			break;
 		case 5:
 			CrudProducto.listProducto();
+			break;
+		case 6:
+			CrudProducto.listProductoByIdCategoria();
 			break;
 		}
 

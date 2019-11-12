@@ -30,7 +30,7 @@ public class CrudCliente {
 		valores = scan.nextLine();
 		cli.setDni(valores);
 		System.out.println("\n");
-		}while(valores.matches("^[0-9]{8}[a-zA-Z]{1}$"));
+		}while(valores.matches("^[0-9]{7}[a-zA-Z]{1}$"));
 		
 		System.out.println("Direccion:");
 		valores = scan.nextLine();
@@ -43,7 +43,7 @@ public class CrudCliente {
 		valores = scan.nextLine();
 		cli.setTelefono(valores);
 		System.out.println("\n");
-		}while(valores.matches("[0-9]*"));
+		}while(valores.matches("[0-9]+\\s*"));
 		
 		
 		do {
