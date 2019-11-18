@@ -162,7 +162,7 @@ public class CrudProducto {
 		
 		for (DbObject producto : productos) {
 			prod=(Producto) producto;
-			System.out.println(prod.getId()+""+prod.toString());
+			System.out.println(prod.getId()+""+prod.getNombre());
 		}
 		
 	}

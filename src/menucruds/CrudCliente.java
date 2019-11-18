@@ -158,7 +158,7 @@ public class CrudCliente {
 		
 		for (DbObject cliente : clientes) {
 			cli=(Clientes) cliente;
-			System.out.println(cli.getId()+""+cli.toString());
+			System.out.println(cli.getId()+""+cli.getNombre());
 		}
 		
 	}
