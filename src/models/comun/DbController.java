@@ -114,7 +114,7 @@ public class DbController {
 		// Otra posible solución a tener coma al final del elemento
 		//modificaciones = modificaciones.substring(0, modificaciones.length()-1);  
 		
-		String sql = "UPDATE "+TABLA+" SET "+modificaciones+" WHERE 'id'="+obj.getId();
+		String sql = "UPDATE "+TABLA+" SET "+modificaciones+" WHERE id="+obj.getId();
 		System.out.println(sql);
 		
 		boolean check = this.doExecute(sql); 
